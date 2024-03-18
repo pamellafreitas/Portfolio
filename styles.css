@@ -980,8 +980,9 @@ a {
   }
 
   #descri-formacao {
-    margin-left: 2rem;
+    margin-left: 0rem;
     width: 20rem;
+    text-align: center;
   }
 
   .titulo-formacao h2 {
