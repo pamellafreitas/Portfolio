@@ -1247,7 +1247,6 @@ a {
 
 
   .projeto-info h2{
-    font-size: 1rem;
     margin-inline: -0.5rem;
     
     
@@ -1368,8 +1367,5 @@ a {
     text-align: center;
   }
 
-  #projeto {
-    padding-inline: 10rem;
-  }
 }
 
