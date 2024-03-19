@@ -68,6 +68,12 @@ a {
   position: relative;
   transition: 0.3s;
   }
+
+  .container {
+    max-width: 1200px; 
+    padding-block: 4rem;
+    margin: 0 auto;
+}
   
 
   /* HOME */
@@ -79,7 +85,6 @@ a {
   }
   
 .content {
-  padding: 2rem 10rem;
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
@@ -200,6 +205,8 @@ a {
   margin-inline: 20rem;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin: 0 auto; 
 }
 
 #caixa-texto p {
@@ -220,6 +227,13 @@ a {
   position: relative;
   background: #02000D;
   padding: 6rem 12rem;
+
+}
+
+#container-formacao {
+  max-width: 1300px;
+  margin: 0 auto; 
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -333,7 +347,6 @@ a {
 .icone-conhecimento li {
   list-style-type: none;
   margin: 0.5rem;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -349,7 +362,12 @@ a {
   overflow: hidden;
   padding: 4rem 3rem;
   background: #02000D;
+}
 
+#container-projeto {
+  position: relative;
+  max-width: 1300px; 
+  margin: 0 auto; 
 }
 
 #titulo-projeto {
@@ -376,7 +394,7 @@ a {
 .projeto-card {
   background: linear-gradient(to bottom, #2D0140, #1B0126);
   width: 22rem;
-  height: 37rem;
+  height: 23rem;
   margin-right: 40px;
   border-radius: 5px;
   padding-inline: 8rem;
@@ -396,17 +414,44 @@ a {
   overflow: hidden;
 }
 
+
+.projeto-img:hover .tecnologias {
+  opacity: 0.8;
+}
+
+
+.tecnologias {
+  width: 600px;
+  height: 274px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tecnologias:hover .tecnologias {
+  opacity: 1;
+}
+
 .imagem-pequena {
   display: none; 
 }
 
 .card-btn {
-  font: 1rem fira sans;
+  font: 0.8rem fira sans;
   position: absolute;
   bottom: 0.8rem;
   left: 50%;
   transform: translateX(-50%);
-  padding: 10px;
+  padding: 6px 10px;
   width: 34.8rem;
   text-align: center;
   text-transform: capitalize;
@@ -418,10 +463,6 @@ a {
   transition: 0.5s;
   cursor: pointer;
   opacity: 0;
-}
-
-.projeto-info {
-  font-family: fira sans;
 }
 
 .projeto-card:hover .card-btn {
@@ -439,6 +480,7 @@ a {
   margin: 0rem -6rem 0rem -6rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  width: 500px;
   height: 11.5rem;
 }
 
@@ -446,6 +488,7 @@ a {
   color: #ffffffd3;
   text-transform: uppercase;
   padding-bottom: 0.5rem;
+  text-align: center;
 }
 
 .descricao-info {
@@ -462,7 +505,7 @@ a {
 .pre-btn,
 .nxt-btn {
   border: none;
-  width: 10vw;
+  width: 10%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -473,10 +516,11 @@ a {
   background-color: #02000D;
   opacity: 0.5;
   z-index: 1;
+  margin-inline: -5rem;
 }
 
 .pre-btn {
-  left: 0;
+  left: 0px;
   transform: rotate(180deg);
 }
 
@@ -498,6 +542,11 @@ a {
   position: relative;
   background: #02000D;
   padding: 6rem 16rem;
+}
+
+#container-servicos {
+  max-width: 1200px; 
+  margin: 0 auto; 
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -562,7 +611,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 8rem;
+  padding-bottom: 4rem;
 
 }
 
@@ -606,15 +655,11 @@ a {
   left: 0;
   bottom: 0;
   width: 100%;
+  
 }
 
 .footer p {
   opacity: 0.5;
-}
-
-.container {
-  width: 80%; 
-  margin: 0 auto; 
 }
 
 #nav-list a.ativo {
@@ -629,33 +674,36 @@ a {
   opacity: 0;
   filter: blur(15px);
   transform: translateX(-100%);
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .hide2 {
   opacity: 0;
-  transition: all 3s;
+  transition: all 2s;
 }
 
 .show {
   opacity: 1;
   filter: blur(0);
-  transform: translate(0);
-  transition: all 1s;
+  transform: translatex(0);
+  transition: all 0.5s;
 }
 
 .show2 {
   opacity: 1;
-  transition: all 2s;
+  transition: all 0.5s;
 }
 
 /* Responsivo */
 
-@media screen and (max-width: 1300px) {
+@media (max-width: 1300px) {
 
-  .content {
-    padding: 0rem 8rem;
+  .container {
+    padding-block: 4rem;
+    max-width: 900px;
+    margin: 0 auto; 
   }
+
 
   .titulo h1 {
     margin-bottom: 1rem;
@@ -683,9 +731,6 @@ a {
 
     /* FORMAÇÃO */
 
-  #formacao {
-    padding: 5rem 12rem;
-  }
 
   .titulo-formacao h2 {
     font: 6rem fira sans;
@@ -711,13 +756,11 @@ a {
 
 @media (max-width: 1100px) {
 
+
   #home {
     height: 35rem;
     }
 
-  .content {
-    padding: 0rem 5rem;
-  }
 
   #nav-list a {
     font-size: 14px;
@@ -967,8 +1010,8 @@ a {
 
     /* FORMAÇÃO */
 
-  #formacao{
-    padding: 3rem 4rem;
+  #container-formacao{
+    margin-block: -2rem;
     display: flex;
     flex-direction: column; 
     align-items: center; 
@@ -1006,8 +1049,8 @@ a {
 
   /* SERVIÇOS */
 
-  #servicos{
-    padding: 3rem 4rem;
+  #container-servicos{
+    margin-block: -2rem;
     display: flex;
     flex-direction: column; 
     align-items: center; 
@@ -1060,14 +1103,15 @@ a {
 
 @media (max-width: 768px) {
 
+  .container {
+    max-width: 500px;
+  }
+
+
   #home {
     background: #02000D;
     height: 25rem;
     }
-
-  .content {
-  padding: 2rem 3rem;
-  }
 
 
   .titulo h1 {
@@ -1089,7 +1133,7 @@ a {
   }
 
   .icone-contato a svg{
-    width: 45px;
+    width: 40px;
   }
 
   .bubbles span {
@@ -1128,7 +1172,16 @@ a {
 
   .projeto-card {
     width: 5rem;
-    height: 34rem;
+    height: 11rem;
+  }
+
+  .tecnologias {
+    width: 285px;
+    height: 132px;
+  }
+
+  .tecnologias li svg{
+    width: 35px;
   }
 
   .projeto-img {
@@ -1136,12 +1189,7 @@ a {
   }
 
   .card-btn {
-    width: 18.8rem;
-  }
-
-  .projeto-info {
-    height: 20rem;
-    margin: 0rem -7rem 0rem -7rem;
+    width: 17.5rem;
   }
 
   .imagem-grande {
@@ -1153,14 +1201,14 @@ a {
   
   .pre-btn,
   .nxt-btn {
+    margin-top: 2rem;
     border: none;
     width: 12vw;
     z-index: 1;
+    margin-inline: 0;
   }
 
 }
-
-
 
 
 @media (max-width: 590px) {
@@ -1287,7 +1335,7 @@ a {
   }
 
   .content {
-    padding: 3rem 0.5rem;
+    margin-block: -2rem;
 
   }
 
@@ -1367,6 +1415,11 @@ a {
 
   #descri-formacao {
     text-align: center;
+  }
+
+  footer p {
+    margin: 0 auto;
+    width: 20rem;
   }
 
 }
